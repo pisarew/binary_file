@@ -1,17 +1,9 @@
 #include <stdio.h>
-
+#include "file_func.h"
+// /Users/vivastan/Desktop/T14D23-0/datasets/door_state_1
 void ui(void);
 void print_data(FILE* f);
 
-struct door_state {
-    int year;
-    int month;
-    int day;
-    int hour;
-    int minute;
-    int second;
-    int status;
-};
 
 int main() {
     ui();
@@ -44,10 +36,10 @@ void ui() {
         printf("n/a");
 }
 void print_data(FILE* f) {
-    struct door_state buf;
-    if (f) {
-        while (fread(&buf, sizeof(struct door_state), 1, f) == 1) {
-            printf("%d %d %d %d %d %d %d\n", buf.year, buf.month, buf.day, buf.hour, buf.minute, buf.second, buf.status);
-        }
+    if (!f)
+        return;
+    for (unsigned long i = 0; i < get_records_count_in_file(f); i++) {
+        struct door_state buf = read_record_from_file(f, i);
+        printf("%d %d %d %d %d %d %d %d\n", buf.year, buf.month, buf.day, buf.hour, buf.minute, buf.second, buf.status, buf.code);
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F40CE5D286C7A0C00D20AE5 /* file_func.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F40CE5C286C7A0C00D20AE5 /* file_func.c */; };
 		F7A337A6286C5DCF0082E114 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F7A337A5286C5DCF0082E114 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F40CE5B286C7A0C00D20AE5 /* file_func.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_func.h; sourceTree = "<group>"; };
+		2F40CE5C286C7A0C00D20AE5 /* file_func.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = file_func.c; sourceTree = "<group>"; };
 		F7A337A2286C5DCF0082E114 /* binary_file */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = binary_file; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A337A5286C5DCF0082E114 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				F7A337A5286C5DCF0082E114 /* main.c */,
+				2F40CE5B286C7A0C00D20AE5 /* file_func.h */,
+				2F40CE5C286C7A0C00D20AE5 /* file_func.c */,
 			);
 			path = binary_file;
 			sourceTree = "<group>";
@@ -89,7 +94,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					F7A337A1286C5DCF0082E114 = {
 						CreatedOnToolsVersion = 13.1;
@@ -120,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A337A6286C5DCF0082E114 /* main.c in Sources */,
+				2F40CE5D286C7A0C00D20AE5 /* file_func.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +183,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -230,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -240,6 +246,7 @@
 		F7A337AA286C5DCF0082E114 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2P3BDMVVB;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -250,6 +257,7 @@
 		F7A337AB286C5DCF0082E114 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2P3BDMVVB;
 				ENABLE_HARDENED_RUNTIME = YES;
